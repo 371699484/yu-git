@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+@-webkit-keyframes text{
+	from{-webkit-transform:translateX(0px)}
+	to{-webkit-transform:translateX(-600px)}
+	
+}
+#boxbig{width:600px; height:30px; overflow:hidden;margin:100px auto; border-radius:20%; }
+#box{ width:1200px; height:30px;  border:1px solid #ccc;
+background:-webkit-repeating-linear-gradient(-30deg,red 0px ,red 10px,green 10px, green 20px);
+
+}
+
+</style>
+
+<script>
+window.onload=function(){
+	var oBoxBig = document.getElementById('boxbig');
+	var oBox = document.getElementById('box');
+	
+	var left = 0;
+	setInterval(function(){
+		left-=2;
+		if(left<=-600){
+			left=0;
+		}
+		oBox.style.WebkitTransform = 'translateX('+left+'px)';	
+	},30)
+
+
+}
+</script>
+</head>
+
+
+<body>
+<div id="boxbig">
+	<div id="box"></div>
+</div>
+</body>
+</html>
